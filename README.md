@@ -10,6 +10,8 @@
 7. [Contributing](#contributing)
 8. [Credits](#credits)
 9. [License](#license)
+10.[Technologies Used](#technologies-used)
+
 
 ## Project Introduction
 This project is a portfolio website designed to showcase the web development skills of William L. Haynes. It's built with React and features a single-page application that is deployed on Netlify.
@@ -19,12 +21,10 @@ AS AN employer looking for candidates with experience building single-page appli
 I WANT to view a potential employee's deployed React portfolio of work samples
 SO THAT I can assess whether they're a good candidate for an open position
 
-
 ## Acceptance Criteria
 GIVEN a single-page application portfolio for a web developer
 WHEN I load the portfolio
 THEN I am presented with a page containing a header, a section for content, and a footer
-
 
 ## File Structure
 Below is the file structure of the project:
@@ -80,17 +80,16 @@ To run the application locally, use:
 npm run dev
 Navigate to http://localhost:3000 to view the application.
 
+
+
+## Technologies Used
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A build tool that aims to provide a faster and leaner development experience for modern web projects.
+- **ESLint**: A static code analysis tool for identifying problematic patterns found in JavaScript code.
+## Contributing
+Contact me for more info!
 ## Credits
 William L. Haynes - Developer
 
 ## License
 This project is licensed under the MIT License.
-
-## React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
