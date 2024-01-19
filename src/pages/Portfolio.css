@@ -1,0 +1,17 @@
+.portfolio-section {
+  padding: 20px;
+}
+
+.project {
+  margin-bottom: 30px;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project a {
+  display: inline-block;
+  margin: 10px 5px;
+}

@@ -1,0 +1,21 @@
+.contact-section {
+  padding: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.contact-form button {
+  cursor: pointer;
+}
