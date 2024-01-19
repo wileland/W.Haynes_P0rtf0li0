@@ -3,8 +3,9 @@ nav {
   gap: 1rem; /* Space between navigation links */
 }
 
-nav a {
-  color: white;
+/* Style for all navigation links */
+nav a.nav-link {
+  color: #ffffff; /* This should be a color that contrasts well with the background */
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
@@ -13,7 +14,32 @@ nav a {
   transition: background-color 0.3s, color 0.3s;
 }
 
-nav a:hover, nav a.active {
-  background-color: white;
+/* Style for a navigation link when hovered */
+nav a.nav-link:hover {
+  background-color: #ffffff;
   color: #333;
+}
+
+/* Style for the currently active navigation link */
+nav a.nav-link.active {
+  background-color: #ffffff;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Optional: style for a navigation link that is not currently active */
+/* This ensures it has a different style than the active/hover state */
+nav a.nav-link:not(.active) {
+  background-color: transparent; /* No background color by default */
+}
+
+/* Adjust the color on hover to indicate interactive elements */
+/* It's important that this comes after the :not(.active) styles so it has higher specificity */
+nav a.nav-link:not(.active):hover {
+  color: #cccccc; /* A lighter color on hover for non-active links */
+}
+
+/* Highlight the current section with a different color */
+nav a.nav-link.active {
+  color: #f0db4f; /* A bright color for the active link */
 }

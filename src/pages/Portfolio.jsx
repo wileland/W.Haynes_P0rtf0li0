@@ -1,35 +1,26 @@
 import React from "react";
-import "./Portfolio.css"; // Make sure to create a corresponding CSS file
+import Project from "../components/Project/Project";
+import "./portfolio.css"; // Your portfolio CSS
 
 function Portfolio() {
-  // Replace these placeholders with actual projects and links
   const projects = [
+    // Add your projects here
     {
       title: "Project 1",
-      description: "A brief description of Project 1.",
-      image: "/path-to-project-1-image.jpg", // Replace with path to your project image
-      link: "http://link-to-deployed-project-1.com", // Replace with link to your project
-      repo: "http://link-to-project-1-repo.com", // Replace with link to your project repo
+      description: "This is a great project.",
+      imageUrl: "/path-to-image.jpg",
+      projectUrl: "http://live-demo-link.com",
+      githubUrl: "http://github-repo-link.com",
     },
-    // Add more projects as needed
+    // More projects...
   ];
 
   return (
-    <section className="portfolio-section">
-      <h2>My Portfolio</h2>
+    <section className="portfolio">
+      <h2>My Projects</h2>
       <div className="projects-list">
         {projects.map((project, index) => (
-          <div key={index} className="project">
-            <img src={project.image} alt={project.title} />
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              View Project
-            </a>
-            <a href={project.repo} target="_blank" rel="noopener noreferrer">
-              View Code
-            </a>
-          </div>
+          <Project key={index} {...project} />
         ))}
       </div>
     </section>

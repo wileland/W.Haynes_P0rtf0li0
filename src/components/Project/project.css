@@ -1,0 +1,43 @@
+.project {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.project-details {
+  text-align: center;
+}
+
+.project-title {
+  margin-top: 8px;
+  font-size: 1.5rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.project-links {
+  margin-top: 12px;
+}
+
+.project-link {
+  text-decoration: none;
+  padding: 8px 16px;
+  margin: 4px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.
+    
