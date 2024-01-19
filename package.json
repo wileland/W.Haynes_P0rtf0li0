@@ -1,7 +1,7 @@
 {
   "name": "p0r7f01i0-r34c7",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
