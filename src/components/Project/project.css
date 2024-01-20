@@ -39,5 +39,15 @@
   border-radius: 4px;
   background-color: #007bff;
   color: white;
-  transition: background-color 0.
-    
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  /* Add focus styles for accessibility */
+  outline: none; /* Removes the default outline */
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #007bff; /* Custom focus ring */
+}
+
+.project-link:hover,
+.project-link:focus { /* Consistent styles for hover and focus */
+  background-color: #0056b3; /* Darker blue on hover/focus */
+}

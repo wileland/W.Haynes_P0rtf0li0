@@ -13,3 +13,19 @@
   object-fit: cover;
   margin-bottom: 20px;
 }
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .about-me, .contact-section, .portfolio-section, .resume-section {
+    padding: 10px;
+    flex-direction: column;
+  }
+  .project, .project-content, .contact-form {
+    width: 100%;
+  }
+}
+
+/* Focus styles for accessibility */
+button:focus, input:focus, textarea:focus, a:focus {
+  outline: 3px solid #0056b3; /* Use your brand color for the outline */
+  outline-offset: 2px;
+}
