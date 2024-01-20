@@ -1,11 +1,12 @@
 import React from "react";
 import "./AboutMe.css";
+import avatarImage from '../assets/my-avatar.jpg';
 
 function AboutMe() {
   return (
     <section className="about-me">
       <img
-        src="/path-to-your-avatar.jpg" // Replace with the path to your actual avatar
+        src={avatarImage} 
         alt="William L. Haynes"
         className="about-me-avatar"
       />
