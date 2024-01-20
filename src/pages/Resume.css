@@ -1,15 +1,17 @@
 .resume-section {
   padding: 20px;
   text-align: center;
+  background-color: var(--rich-black-fogra-29); /* Background color for the resume section */
+  color: var(--orange-yellow-crayola); /* Text color */
 }
-
 .resume-section a {
   display: inline-block;
   padding: 10px 20px;
   margin-top: 20px;
   border: 1px solid #000;
   text-decoration: none;
-  color: #000;
+  background-color: var(--sandy-brown); /* Button background color */
+  color: var(--rich-black-fogra-29); /* Button text color */
 }
 /* Media Query for responsiveness */
 @media (max-width: 768px) {

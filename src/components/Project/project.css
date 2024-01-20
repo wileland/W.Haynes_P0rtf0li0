@@ -1,11 +1,12 @@
 .project {
-  border: 1px solid #ddd;
+  border: 1px solid var(--sandy-brown); /* Border color from palette */
   border-radius: 8px;
   padding: 16px;
   margin: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--rich-black-fogra-29); /* Background from palette */
 }
 
 .project-image {
@@ -16,16 +17,18 @@
 
 .project-details {
   text-align: center;
+  color: var(--orange-yellow-crayola); /* Text color */
 }
 
 .project-title {
   margin-top: 8px;
   font-size: 1.5rem;
+  color: var(--sandy-brown); /* Title color */
 }
 
 .project-description {
   font-size: 1rem;
-  color: #666;
+  color: var(--orange-yellow-crayola); /* Description color */
 }
 
 .project-links {
@@ -37,17 +40,5 @@
   padding: 8px 16px;
   margin: 4px;
   border-radius: 4px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  /* Add focus styles for accessibility */
-  outline: none; /* Removes the default outline */
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #007bff; /* Custom focus ring */
-}
-
-.project-link:hover,
-.project-link:focus { /* Consistent styles for hover and focus */
-  background-color: #0056b3; /* Darker blue on hover/focus */
-}
+  background-color: var(--jungle-green); /* Button background */
+  color: var(--rich-black-f

@@ -1,5 +1,7 @@
 .contact-section {
   padding: 20px;
+  background-color: var(--sandy-brown); /* Background color for contact section */
+  color: var(--rich-black-fogra-29); /* Text color */
 }
 
 .contact-form {

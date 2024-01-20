@@ -4,10 +4,11 @@
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px; /* This will add space between the projects */
+  background-color: var(--rich-black-fogra-29); /* Background color for portfolio */
 }
 
 .project {
-  border: 1px solid #e1e1e1; /* A light border for each project */
+  border: 1px solid var(--burnt-sienna); /* A light border for each project */
   border-radius: 8px;
   overflow: hidden; /* Makes sure nothing spills outside the border-radius */
   margin-bottom: 30px;
@@ -31,12 +32,13 @@
 }
 
 .project-title {
+  color: var(--orange-yellow-crayola);
   font-size: 1.5rem;
   margin: 10px 0;
 }
 
 .project-description {
-  color: #555; /* A slightly darker color for text for better readability */
+  color: var(--orange-yellow-crayola);
   font-size: 1rem;
   margin-bottom: 15px;
 }

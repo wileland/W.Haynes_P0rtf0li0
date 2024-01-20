@@ -4,6 +4,8 @@
   align-items: center;
   text-align: center;
   padding: 20px;
+  background-color: var(--jungle-green); /* Added background color */
+  color: var(--rich-black-fogra-29); /* Text color */
 }
 
 .about-me-avatar {
@@ -12,6 +14,7 @@
   height: 150px;
   object-fit: cover;
   margin-bottom: 20px;
+  border: 2px solid var(--orange-yellow-crayola); /* Border color */
 }
 /* Media Query for responsiveness */
 @media (max-width: 768px) {

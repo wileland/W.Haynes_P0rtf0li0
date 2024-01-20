@@ -1,6 +1,6 @@
 header {
-  background-color: #333; /* Dark background */
-  color: white;
+  background-color: var(--jungle-green); /* Background from palette */
+  color: var(--rich-black-fogra-29); /* Text color */
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -9,5 +9,5 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2rem; /* Large font size for the header title */
+  font-size: 2rem; /* Corrected to include a size */
 }

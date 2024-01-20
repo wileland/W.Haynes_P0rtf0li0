@@ -1,16 +1,22 @@
 :root {
+  /* Global CSS variables */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Color variables from selected Coolors palette */
+  --rich-black-fogra-29: #264653;
+  --jungle-green: #2a9d8f;
+  --orange-yellow-crayola: #e9c46a;
+  --sandy-brown: #f4a261;
+  --burnt-sienna: #e76f51;
 }
 
 a {
@@ -54,7 +60,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 /* Focus styles for accessibility */
-button:focus, input:focus, textarea:focus, a:focus {
+button:focus,
+input:focus,
+textarea:focus,
+a:focus {
   outline: 3px solid #0056b3; /* Use your brand color for the outline */
   outline-offset: 2px;
 }
