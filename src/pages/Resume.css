@@ -12,6 +12,18 @@
   text-decoration: none;
   background-color: var(--sandy-brown); /* Button background color */
   color: var(--rich-black-fogra-29); /* Button text color */
+
+  .resume-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0; /* Adjust the margin as needed */
+}
+
+.resume-image-container img {
+  max-width: 100%; /* Ensure the image is responsive and doesn't overflow */
+  height: auto; /* Maintain aspect ratio */
+}
+
 }
 /* Media Query for responsiveness */
 @media (max-width: 768px) {
