@@ -20,10 +20,6 @@ function Resume() {
           Download Resume
         </a>
       </header>
-      <figure className="resume-image-container">
-        <img src={resumeImage} alt="William Haynes" className="resume-image" />
-        <figcaption>William Haynes</figcaption>
-      </figure>
       <div>
         {" "}
         {/* This div wraps around the content sections */}
@@ -104,7 +100,16 @@ function Resume() {
           </ul>
         </section>
       </div>{" "}
-      {/* End of content wrapper div */}
+      {
+        <figure className="resume-image-container">
+          <img
+            src={resumeImage}
+            alt="William Haynes"
+            className="resume-image"
+          />
+          <figcaption>William Haynes</figcaption>
+        </figure>
+      }
     </main>
   );
 }
