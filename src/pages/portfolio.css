@@ -1,77 +1,127 @@
+/* Color variable definitions */
+:root {
+  --rich-black-fogra-29: #010203; /* Dark background color */
+  --orange-yellow-crayola: #f7b32b; /* Accent color for titles and details */
+  --burnt-sienna: #ee6c4d; /* Light border color for project cards */
+  --brand-outline-color: #0056b3; /* Color for focus outlines */
+}
+
+/* General styles for portfolio section */
 .portfolio-section {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20px; /* This will add space between the projects */
-  background-color: var(--rich-black-fogra-29); /* Background color for portfolio */
+  gap: 20px;
+  background-color: var(--rich-black-fogra-29);
 }
 
+/* Styles for individual project cards */
 .project {
-  border: 1px solid var(--burnt-sienna); /* A light border for each project */
+  border: 1px solid var(--burnt-sienna);
   border-radius: 8px;
-  overflow: hidden; /* Makes sure nothing spills outside the border-radius */
+  overflow: hidden;
   margin-bottom: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Project card hover effect for visual feedback */
 .project:hover {
-  transform: translateY(-5px); /* Slightly raise the project card on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Styles for project images to ensure responsiveness */
 .project img {
   max-width: 100%;
   height: auto;
-  display: block; /* Remove any extra space below the image */
+  display: block;
 }
 
+/* Content within project cards */
 .project-content {
   padding: 15px;
 }
 
+/* Project title styling */
 .project-title {
   color: var(--orange-yellow-crayola);
   font-size: 1.5rem;
   margin: 10px 0;
 }
 
+/* Project description styling */
 .project-description {
   color: var(--orange-yellow-crayola);
   font-size: 1rem;
   margin-bottom: 15px;
 }
 
+/* Styles for links and buttons within project cards */
 .project a {
   display: inline-block;
   margin: 10px 5px;
-  background-color: #007bff; /* A nice blue color for buttons */
+  background-color: #007bff; /* Consider using a variable for this color */
   color: white;
   padding: 10px 15px;
-  border-radius: 5px; /* Rounded corners for buttons */
-  text-decoration: none; /* Remove underline from links */
+  border-radius: 5px;
+  text-decoration: none;
   font-weight: bold;
 }
 
+/* Hover effect for links and buttons */
 .project a:hover {
-  background-color: #0056b3; /* Darker blue on hover for buttons */
+  background-color: #0056b3;
   color: #fff;
-  text-decoration: none; /* Ensure no underline on hover */
+  text-decoration: none;
 }
-/* Media Query for responsiveness */
+
+/* Media Query for responsiveness on mobile and tablet screens */
 @media (max-width: 768px) {
-  .about-me, .contact-section, .portfolio-section, .resume-section {
+  .portfolio-section,
+  .project,
+  .project-content {
     padding: 10px;
     flex-direction: column;
-  }
-  .project, .project-content, .contact-form {
     width: 100%;
+  }
+
+  /* Adjust project image size on smaller screens */
+  .project img {
+    width: 100%;
+    height: auto;
   }
 }
 
-/* Focus styles for accessibility */
+/* Focus styles for better accessibility */
 button:focus, input:focus, textarea:focus, a:focus {
-  outline: 3px solid #0056b3; /* Use your brand color for the outline */
+  outline: 3px solid var(--brand-outline-color);
   outline-offset: 2px;
+}
+
+/* Ensure visibility of focus indicator on project links */
+.project a:focus {
+  box-shadow: 0 0 0 3px var(--brand-outline-color);
+}
+
+/* Further style adjustments for mobile screens */
+@media (max-width: 768px) {
+  .project {
+    margin-bottom: 20px;
+  }
+
+  .project-content {
+    padding: 1em;
+  }
+
+  .project-title,
+  .project-description {
+    font-size: calc(1rem + 0.5vw);
+  }
+
+  .project a {
+    padding: 0.75em 1em;
+    font-size: calc(0.875rem + 0.5vw);
+  }
 }

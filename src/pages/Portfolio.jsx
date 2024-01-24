@@ -11,7 +11,7 @@ const projects = [
     description:
       "A tool for Pokémon enthusiasts to create and visualize their dream team...",
     imageUrl: project1Image, // Updated to imported image
-    projectUrl: "http://pokemon-team-picker-live-demo.com",
+    projectUrl: "https://cbaca4.github.io/project01-game-picker/",
     githubUrl: "https://github.com/Cbaca4/project01-game-picker",
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     description:
       "A fun, interactive application that allows users to input names...",
     imageUrl: project2Image, // Updated to imported image
-    projectUrl: "http://jingle-judge-live-demo.com",
+    projectUrl: "https://jingle-judge-61334167825d.herokuapp.com/",
     githubUrl: "https://github.com/wileland/Jingle-Judge",
   },
   {
@@ -31,10 +31,11 @@ const projects = [
   },
 ];
 
+
 function Portfolio() {
   return (
-    <section className="portfolio">
-      <h2>My Projects</h2>
+    <section className="portfolio" aria-labelledby="portfolio-heading">
+      <h2 id="portfolio-heading">My Projects</h2>
       <div className="projects-list">
         {projects.map((project, index) => (
           <Project key={index} {...project} />
