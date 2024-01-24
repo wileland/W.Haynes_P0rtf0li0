@@ -1,0 +1,77 @@
+.portfolio-section {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px; /* This will add space between the projects */
+  background-color: var(--rich-black-fogra-29); /* Background color for portfolio */
+}
+
+.project {
+  border: 1px solid var(--burnt-sienna); /* A light border for each project */
+  border-radius: 8px;
+  overflow: hidden; /* Makes sure nothing spills outside the border-radius */
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.project:hover {
+  transform: translateY(-5px); /* Slightly raise the project card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Remove any extra space below the image */
+}
+
+.project-content {
+  padding: 15px;
+}
+
+.project-title {
+  color: var(--orange-yellow-crayola);
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.project-description {
+  color: var(--orange-yellow-crayola);
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.project a {
+  display: inline-block;
+  margin: 10px 5px;
+  background-color: #007bff; /* A nice blue color for buttons */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px; /* Rounded corners for buttons */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold;
+}
+
+.project a:hover {
+  background-color: #0056b3; /* Darker blue on hover for buttons */
+  color: #fff;
+  text-decoration: none; /* Ensure no underline on hover */
+}
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .about-me, .contact-section, .portfolio-section, .resume-section {
+    padding: 10px;
+    flex-direction: column;
+  }
+  .project, .project-content, .contact-form {
+    width: 100%;
+  }
+}
+
+/* Focus styles for accessibility */
+button:focus, input:focus, textarea:focus, a:focus {
+  outline: 3px solid #0056b3; /* Use your brand color for the outline */
+  outline-offset: 2px;
+}
