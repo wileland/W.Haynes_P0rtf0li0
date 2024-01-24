@@ -23,7 +23,7 @@ function AboutMe() {
         orchestrating behavior, my path as an educator has been as enlightening
         as it has been fulfilling.
       </p>
-      {/* Add more about your experience, education, skills, etc. */}
+      {/* More to come! */}
     </section>
   );
 }
