@@ -1,20 +1,75 @@
-.resume-section {
-  padding: 20px;
-  text-align: center;
-  background-color: var(--rich-black-fogra-29); /* Background color for the resume section */
-  color: var(--orange-yellow-crayola); /* Text color */
+/* Ensure variables are defined at the root */
+:root {
+  --rich-black-fogra-29: #010203;
+  --orange-yellow-crayola: #f7b32b;
+  --sandy-brown: #f4a261;
+  --brand-outline-color: #0056b3;
 }
+
+/* Style for the main resume section */
+.resume-section {
+  padding: 1.25em; /* Use em units for padding */
+  text-align: center;
+  background-color: var(--rich-black-fogra-29);
+  color: var(--orange-yellow-crayola);
+}
+
+/* Typography for readability */
+.resume-section h1 {
+  font-size: 2em; /* Large font size for the main title */
+  margin-bottom: 0.5em; /* Spacing after the title */
+}
+
+.resume-section h3 {
+  font-size: 1.5em; /* Distinguish section headers with a larger size */
+  margin-top: 1em; /* Spacing before each section header */
+  margin-bottom: 0.5em; /* Spacing after each section header */
+}
+
+.resume-section p, .resume-section li {
+  font-size: 1em; /* Standard font size for paragraph and list items */
+  line-height: 1.6; /* Line height for improved readability */
+}
+
+/* List styling */
+.resume-section ul {
+  list-style-type: none; /* Removes default list styling */
+  padding-left: 0; /* Aligns list with the rest of the content */
+}
+
+.resume-section li::before {
+  content: '•'; /* Custom bullet point */
+  color: var(--orange-yellow-crayola); /* Bullet point color */
+  display: inline-block; /* Necessary for alignment */
+  width: 1em; /* Fixed width for alignment */
+  margin-left: -1em; /* Align bullet points with the text */
+}
+
+/* Link and Button Styling */
 .resume-section a {
   display: inline-block;
   padding: 10px 20px;
   margin-top: 20px;
-  border: 1px solid #000;
   text-decoration: none;
   background-color: var(--sandy-brown); /* Button background color */
   color: var(--rich-black-fogra-29); /* Button text color */
+  border: none; /* Remove border for a cleaner look */
+  border-radius: 5px; /* Rounded corners for aesthetic touch */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color on hover */
+}
 
-/* Style for the image container */
-/* Container for the resume image */
+.resume-section a:hover, .resume-section a:focus {
+  background-color: var(--orange-yellow-crayola); /* Highlight color on hover/focus */
+  color: var(--rich-black-fogra-29); /* Text color change on hover/focus for contrast */
+}
+
+/* Professional Summary Style */
+.professional-summary {
+  text-align: left; /* Aligns the text to the left for easy reading */
+  margin: 1em 0; /* Spacing around the summary section */
+}
+
+/* Image container style */
 .resume-image-container {
   max-width: 60%; /* Max width to ensure container doesn't become too wide */
   margin: 20px auto; /* Centers container and provides some spacing from other elements */
@@ -26,28 +81,68 @@
 /* Resume image styling */
 .resume-image-container img {
   max-width: 33%; /* Image occupies at most 1/3 of the container's width */
-  min-width: 150px; /* Minimum width to ensure image is not too small on narrow screens */
+  min-width: 100px; /* Minimum width to ensure image is not too small on narrow screens */
   height: auto; /* Maintains aspect ratio */
   border-radius: 5px; /* Optional: Adds rounded corners to the image */
 }
 
-
+/* Accessibility Improvements */
+.resume-section a, .resume-section button {
+  cursor: pointer; /* Indicates clickable items */
 }
 
-}
 /* Media Query for responsiveness */
 @media (max-width: 768px) {
-  .about-me, .contact-section, .portfolio-section, .resume-section {
-    padding: 10px;
-    flex-direction: column;
+  .resume-section {
+    padding: 0.625em;
   }
-  .project, .project-content, .contact-form {
-    width: 100%;
+
+  .resume-image-container {
+    max-width: 100%;
+  }
+
+  .resume-image-container img {
+    max-width: 50%;
+    min-width: 100px; /* Adjust minimum width for small screens */
+  }
+
+  .resume-section h1,
+  .resume-section h3,
+  .resume-section p,
+  .resume-section li {
+    font-size: 1em; /* Adjust font size for small screens */
+  }
+
+  .resume-section a {
+    padding: 0.625em 1.25em;
+    font-size: 1em;
+  }
+
+  .professional-summary {
+    text-align: center; /* Center-align text for better mobile readability */
   }
 }
 
-/* Focus styles for accessibility */
-button:focus, input:focus, textarea:focus, a:focus {
-  outline: 3px solid #0056b3; /* Use your brand color for the outline */
-  outline-offset: 2px;
+/* Print Styles */
+@media print {
+  .resume-section,
+  .resume-section a,
+  .resume-section button {
+    background-color: white; /* Ensures backgrounds are not printed */
+    color: black; /* Text is printed in black for clarity */
+    border: none; /* Removes borders for a clean print */
+  }
+
+  .resume-image-container img {
+    max-width: 100%; /* Full width images for print */
+  }
+
+  .resume-section ul {
+    list-style-type: disc; /* Adds bullets back in for printed lists */
+    margin-left: 20px; /* Adds indentation for list items in print */
+  }
+
+  .resume-section li::before {
+    content: none; /* Removes custom bullet points for print */
+  }
 }
