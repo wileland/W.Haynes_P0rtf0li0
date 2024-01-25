@@ -54,7 +54,16 @@ function Contact() {
 
       <div className="contact-info">
         <p>Email: wileland7@gmail.com</p>
-        {/* Add social media and other links here */}
+        <p>
+          LinkedIn:{" "}
+          <a href="https://www.linkedin.com/in/william-haynes-3b763a163/">
+            Your LinkedIn Profile
+          </a>
+        </p>
+        <p>
+          Twitter: <a href="https://twitter.com/Wileland">Your Twitter</a>
+        </p>
+        {/* Add other social media and contact links as needed */}
       </div>
     </section>
   );
