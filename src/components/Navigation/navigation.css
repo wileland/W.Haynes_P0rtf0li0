@@ -4,9 +4,7 @@
   --burnt-sienna: #ee6c4d; /* Light border color for project cards */
   --brand-outline-color: #0056b3; /* Color for focus outlines */
   --sandy-brown: #f4a261; /* Background color for contact section */
-  --jungle-green: #007965; /* A bright color for the active link */
 }
-
 nav {
   display: flex;
   gap: 1rem; /* Space between navigation links */
@@ -40,4 +38,3 @@ nav a.nav-link:not(.active):hover {
 nav a.nav-link.active {
   color: var(--jungle-green); /* A bright color for the active link */
 }
-
