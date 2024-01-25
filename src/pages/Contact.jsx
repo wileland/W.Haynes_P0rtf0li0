@@ -23,7 +23,7 @@ function Contact() {
         <button type="submit">Send Message</button>
       </form>
 
-      <div className="contact-info">{Reach me @ wileland7@gmail.com!}</div>
+      <div className="contact-info">Reach me @ wileland7@gmail.com!</div>
     </section>
   );
 }
