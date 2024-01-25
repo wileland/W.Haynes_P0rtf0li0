@@ -8,6 +8,8 @@
 
 /* Style for the main resume section */
 .resume-section {
+  max-width: 100vw; /* Prevents the section from exceeding the viewport width */
+  overflow-x: hidden; /* Hides horizontal overflow */
   padding: 1.25em; /* Use em units for padding */
   text-align: center;
   background-color: var(--rich-black-fogra-29);

@@ -3,7 +3,7 @@ import "./header.css";
 
 const Header = () => {
   return (
-    <header>
+    <header role="banner">
       <h1>William L. Haynes</h1>
       <Navigation />
     </header>
