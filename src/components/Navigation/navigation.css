@@ -1,3 +1,10 @@
+:root {
+  --rich-black-fogra-29: #010203; /* Dark background color */
+  --orange-yellow-crayola: #f7b32b; /* Accent color for titles and details */
+  --burnt-sienna: #ee6c4d; /* Light border color for project cards */
+  --brand-outline-color: #0056b3; /* Color for focus outlines */
+  --sandy-brown: #f4a261; /* Background color for contact section */
+}
 nav {
   display: flex;
   gap: 1rem; /* Space between navigation links */
