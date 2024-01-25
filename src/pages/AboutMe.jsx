@@ -1,4 +1,3 @@
-import React from "react";
 import "./AboutMe.css";
 import avatarImage from '../assets/my-avatar.jpg';
 
@@ -10,7 +9,7 @@ function AboutMe() {
         alt="William L. Haynes"
         className="about-me-avatar"
       />
-      <h1>Hi, I'm William L. Haynes</h1>
+      <h1>Hi, I&apos;m William L. Haynes</h1>
       <p>
         With a decade dedicated to shaping minds as an English and ESOL teacher
         in inner-city San Antonio, I bring a wealth of experience to the table.

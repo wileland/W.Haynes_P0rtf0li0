@@ -1,31 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense, lazy, useState } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AboutMe from "./pages/AboutMe";
-import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact";
-import Resume from "./pages/Resume";
 import "./App.css";
 
+// Lazy load the pages
+const AboutMe = lazy(() => import("./pages/AboutMe"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Resume = lazy(() => import("./pages/Resume"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
 function App() {
+  // State for error recovery
+  const [errorKey, setErrorKey] = useState(0);
+
+  // Function to reset error boundary
+  const resetErrorBoundary = () => {
+    setErrorKey((prevKey) => prevKey + 1);
+  };
+
   useEffect(() => {
     const handleOrientationChange = () => {
-      // Check if the device is in landscape orientation
       if (window.orientation === 90 || window.orientation === -90) {
-        // Adjust styles for landscape orientation
         document.body.classList.add("landscape");
       } else {
-        // Reset styles for portrait orientation
         document.body.classList.remove("landscape");
       }
     };
 
     window.addEventListener("orientationchange", handleOrientationChange);
-    // Call the handler to set the initial orientation
     handleOrientationChange();
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("orientationchange", handleOrientationChange);
     };
@@ -35,14 +42,21 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<AboutMe />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/resume" element={<Resume />} />
-          </Routes>
-        </main>
+        {/* Key prop will force remount if errorKey changes */}
+        <ErrorBoundary key={errorKey} onReset={resetErrorBoundary}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <main>
+              <Routes>
+                <Route path="/" element={<AboutMe />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/resume" element={<Resume />} />
+                {/* Fallback route for not found */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+          </Suspense>
+        </ErrorBoundary>
         <Footer />
       </div>
     </Router>

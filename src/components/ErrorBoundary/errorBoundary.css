@@ -1,0 +1,30 @@
+.error-boundary {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: center;
+  background-color: #fff1f0;
+  border: 1px solid #ffa39e;
+  border-radius: 4px;
+}
+
+.error-boundary h1 {
+  color: #cf1322;
+}
+
+.error-boundary p {
+  color: #000;
+}
+.error-boundary button {
+  /* Add your button styling here */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error-boundary button:hover {
+  background-color: #0056b3;
+}

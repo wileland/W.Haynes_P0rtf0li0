@@ -1,0 +1,36 @@
+/* NotFound.css */
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Adjust the height to center the content vertically */
+  text-align: center;
+}
+
+.not-found-container h1 {
+  font-size: 5rem; /* Large font size for the error code */
+  color: var(--burnt-sienna); /* Use a color variable for brand consistency */
+}
+
+.not-found-container p {
+  font-size: 1.5rem; /* Readable paragraph size */
+}
+
+/* Style for the home link or button */
+.back-home {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-decoration: none; /* Remove default link underline */
+  color: var(--rich-black-fogra-29);
+  background-color: var(--orange-yellow-crayola);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.back-home:hover {
+  background-color: var(--burnt-sienna);
+}

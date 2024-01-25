@@ -12,18 +12,37 @@
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
   max-width: 400px;
   margin: auto;
 }
+
+/* Add styles for larger screens */
+@media (min-width: 768px) {
+  .contact-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Make message box span both columns */
+  .contact-form textarea {
+    grid-column: span 2;
+  }
+}
+
 
 .contact-form input,
 .contact-form textarea,
 .contact-form button {
   margin-bottom: 10px;
   padding: 10px;
-  border: 2px solid var(--rich-black-fogra-29); /* Enhance visibility */
+  border: 2px solid var(--rich-black-fogra-29);
+ .contact-form button:hover {
+  box-shadow: 0 0 0 3px var(--brand-color);
+}
+
+ /* Enhance visibility */
 }
 
 
@@ -43,6 +62,7 @@
 
 /* Focus styles for accessibility */
 button:focus, input:focus, textarea:focus-visible, a:focus-visible {
-  outline: 3px solid var #0056b3; /* Use your brand color for the outline */
+  outline: 3px solid var(--brand-outline-color); /* Corrected use of var() */
   outline-offset: 2px;
 }
+
